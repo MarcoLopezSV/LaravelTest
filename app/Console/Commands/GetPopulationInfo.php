@@ -27,8 +27,11 @@ class GetPopulationInfo extends Command
      *
      * @return int
      */
-    public function handle()
-    {
-        $this->info('Success');
+    public function handle() {
+        //Creating a function to get the data from the API
+        function getData(){
+        //call APIs
+        $data = Http::get("https://datausa.io/api/data?drilldowns=Nation&measures=Population");
+        }
     }
 }
