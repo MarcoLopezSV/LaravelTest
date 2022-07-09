@@ -9,12 +9,12 @@ use Illuminate\Database\Eloquent\Model;
  * Class Population
  *
  * @property $id
- * @property $cod_product
- * @property $nameProd
- * @property $descProd
- * @property $typeProd
- * @property $costUnit
- * @property $cantExist
+ * @property $id_nation
+ * @property $nation
+ * @property $id_year
+ * @property $year
+ * @property $population
+ * @property $slug_nation
  * @property $created_at
  * @property $updated_at
  *
@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\Model;
 class Population extends Controller
 {
     
-    static $rules = [
+    static $states = [
 		'ID_Nation' => 'required',
 		'Nation' => 'required',
 		'ID_Year' => 'required',
@@ -32,8 +32,6 @@ class Population extends Controller
 		'Population' => 'required',
 		'Slug_Nation' => 'required',
     ];
-
-    protected $perPage = 20;
 
     /**
      * Attributes that should be mass-assignable.

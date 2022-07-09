@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('population', function (Blueprint $table) {
-            $table->id();
+            $table-> increments('id');
             $table->string('id_nation');
             $table->string('nation');
             $table->string('id_year');
